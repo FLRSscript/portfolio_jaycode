@@ -1,0 +1,28 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+
+.dev__titulo {
+    margin: 0 0 3rem 0 ;
+    font-size: 7rem;
+    color: $azulClaro;
+}
+
+.dev__sociales {
+    display: flex;
+    gap: 2rem;
+}
+
+.dev__info {
+    margin-bottom: 4rem;
+    width: 40rem;
+}
+
+.dev__descripcion {
+    font-size: 2rem;
+    width: 55rem;
+}
+
+.typed {
+    color: $verde;
+}

@@ -1,0 +1,143 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.proyectos {
+    margin-bottom: 20rem;
+}
+.proyecto__card {
+    height: auto;
+    width: 25rem;
+    padding: .5rem .5rem 0 .5rem ;
+    background-color: $azulD2;
+    // box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+    
+    border-radius: 1rem;
+    transition: transform ease .2s;
+    &:hover{
+        transform: scale(1.02);
+        box-shadow: 0px 0px 20px rgba(0, 200, 111, 0.5);
+    }
+}
+
+.proyecto__info {
+    padding: 1rem 0 0 1rem;
+}
+
+.proyecto__titulo {
+    font-weight: 700;
+    font-size: 2rem;
+}
+
+.proyecto__imagen {
+    background: url(/build/img/bmo.webp) center center / cover no-repeat;
+    height: 15rem;
+    max-height: 15rem;
+    border-radius: 1rem;
+}
+
+.proyecto__descripcion {
+    font-size: 1.3rem;
+    line-height: 1.8rem;
+}
+.proyectos__contenedor {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.proyecto__tecnologias {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    // margin-left: 1rem;
+}
+
+.tecnologia {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 1.8rem;
+    width: 5.6rem;
+    border-radius: .1rem;
+    gap: .5rem;
+    padding: .4rem;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.html {
+    background-color: orange;
+    
+}
+
+.php {
+    background-color: #8993be;
+    
+}
+
+.js {
+    background-color: black;
+    
+}
+
+.css {
+    background-color: rgb(44, 139, 235);
+    
+}
+
+.sass {
+    background-color: rgb(216, 78, 207);
+    
+}
+
+.boot {
+    background-color: rgb(93, 177, 230);
+    
+}
+
+.sql {
+    background-color: black;
+    
+}
+
+.tecnologia__nombre {
+    font-weight: 900;
+    font-family: $fuente_roboto;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    margin: 0;
+    color: white;
+    text-transform: uppercase;
+}
+
+.proyecto__links {
+    display: flex;
+    padding: 1rem;
+    margin-top: .2rem;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+    max-height: 6rem;
+}
+
+.tecnologia__icon {
+    width: 1rem;
+    height: 1rem;
+}
+
+.link {
+    font-size: 40px;
+    color: greenyellow;
+    transition: font-size 0.2s ease;
+    &:hover {
+        font-size: 55px;
+    }
+}
+
+.github {
+    font-size: 25px;
+    color: greenyellow;
+    transition: font-size 0.2s ease;
+    &:hover {
+        font-size: 40px;
+    }
+}

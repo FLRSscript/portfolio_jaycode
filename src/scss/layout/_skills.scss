@@ -1,0 +1,35 @@
+.skills__contenedor {
+display: grid;
+grid-template-columns: repeat(2, 1fr);
+ 
+}
+.skills__stack {
+    height: auto;
+}
+.skills__formacion {
+    height: 30rem;
+}
+
+.skills__educacion {
+    margin-bottom: 2rem;
+}
+.stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2.5rem;
+    margin: 1rem 0 1rem 0;
+}
+
+.skill__escuela {
+    font-size: 2rem;
+}
+.skill__descripcion {
+    line-height: 2rem;
+    font-size: 1.5rem;
+    width: 15rem;
+}
+.softskill {
+    width: auto;
+    background-color: $azulMid;
+}
+

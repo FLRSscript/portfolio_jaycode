@@ -1,0 +1,53 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.header {
+    position: fixed;
+    background-color: $azulMid;
+    min-height: 100vh;
+    box-shadow: 0px 0px 20px rgba(0, 200, 111, 0.5);
+
+    .header__contenedor {
+        display: block;
+        padding: 4rem;
+        justify-content: center;
+        align-items: center;
+        margin-top: 1rem;
+
+        .header__titulo {
+            color: $azulD2;
+            padding-bottom: 1rem;
+            border-bottom: 2px solid white;
+        }
+
+        .header__imagen {
+            background: url(/build/img/bmo.webp) center center / cover no-repeat;
+            height: 15rem;
+            width: 15rem;
+            border-radius: 50%;
+            border: 1px solid $verde;
+            box-shadow: 0px 0px 20px rgba(0, 200, 111, 0.5);
+        }
+
+        .header__navegacion {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .header__navegacion a {
+            color: white;
+            font-size: 2rem;
+        }
+
+        .header__sociales {
+            display: flex;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        .bi{
+            font-size: 2rem;
+            color: white;
+            
+        }
+    }
+}
