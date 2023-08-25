@@ -27,11 +27,20 @@
     font-weight: 700;
     font-size: 2rem;
 }
+.proyecto__nombre {
+    font-weight: 700;
+    font-size: 10rem;
+}
 
 .proyecto__imagen {
     background: url(/build/img/bmo.webp) center center / cover no-repeat;
     height: 15rem;
     max-height: 15rem;
+    border-radius: 1rem;
+}
+.proyecto__banner {
+    height: 30rem;
+    max-height: 20rem;
     border-radius: 1rem;
 }
 
@@ -143,4 +152,21 @@
     &:hover {
         font-size: 40px;
     }
+}
+
+.ver-todos {
+ margin: 4rem 0 0 0
+ 
+}
+
+.proyectos-todos {
+    min-height: 100vh;
+}
+
+.proyecto__detalle {
+    background-color: $azulD2;
+    padding: 2rem;
+    margin: 0 auto;
+    width: 75%;   
+    border-radius: 1.5rem;
 }

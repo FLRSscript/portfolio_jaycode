@@ -88,7 +88,7 @@ span {
     background: linear-gradient(45deg, #051933, #164074);
     background-size: 200% 200%;
     animation: gradientAnimate 4s ease infinite;
-
+    min-height: 100vh;
     @keyframes gradientAnimate {
         0% {
             background-position: 0% 50%;
@@ -107,9 +107,8 @@ span {
 
 
 section {
-    min-height: 100vh;
+    min-height: 120vh;
     max-width: 85%;
-
 }
 
 .boton {
