@@ -63,7 +63,48 @@
             </div>
 
             <script>
-        
+
+                // Obtener los parámetros de la URL
+                const urlParams = new URLSearchParams(window.location.search);
+                const id = urlParams.get('id');
+                console.log(id);
+                const nombre = urlParams.get('nombre');
+                const imagen = urlParams.get('imagen');
+                const descripcion = urlParams.get('descripcion');
+                const tecnologias = urlParams.get('tecnologias');
+                const info = urlParams.get('info');
+                const link = urlParams.get('link');
+
+                const tecnologiasArray = tecnologias.split(','); // Convertir la cadena en un array
+                let tecnologiasDetalle = '';
+                tecnologiasArray.forEach(tecnologiaDet => {
+                    tecnologiasDetalle += `
+                    <div class="tecnologia ${tecnologiaDet}">
+                        <img class="tecnologia__icon" src="/build/img/${tecnologiaDet}.webp" alt="imagen lenguaje">
+                        <p class="tecnologia__nombre">${tecnologiaDet}</p>
+                    </div>`;
+                });
+
+                // Mostrar las propiedades del proyecto en el div
+                const proyectoDetalleDiv = document.querySelector('.proyecto__detalle');
+                proyectoDetalleDiv.innerHTML = `
+                <div class="proyecto__banner" style="background-Image: url(${imagen})"></div>
+                <div class="proyecto__info">
+                    <h4 class="proyecto__nombre">${nombre}</h4>
+                    <p class="proyecto__detalles">${descripcion}</p>
+                    <div class="proyecto__tecnologias">
+                    ${tecnologiasDetalle}
+                    </div><!-- PROYECTO TECNOLOGIAS -->
+                    <div class="proyecto__links">
+                        <div class="link__git">
+                            <a id="${id}" class="github" href="javascript:void(0);"><i class="bi bi-info-circle-fill"></i></a>
+                        </div>
+                     <div class="link__link">
+                            <a class="link" href="${link}"><i class="bi bi-link"></i></a>
+                        </div>
+                    </div><!-- PROYECTO LINKS -->
+                </div><!-- PROYECTO INFO -->
+                `;
             </script>
         </body>
 

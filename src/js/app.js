@@ -44,7 +44,7 @@ const mostrarProyecto = (id, nombre, imagen, descripcion, tecnologias, info, lin
                 <a id="${id}" class="github" href="javascript:void(0);"><i class="bi bi-info-circle-fill"></i></a>
             </div>
             <div class="link__link">
-                <a class="link" href=""><i class="bi bi-link"></i></a>
+                <a class="link" href="${link}"><i class="bi bi-link"></i></a>
             </div>
         </div><!-- PROYECTO LINKS -->
     </div><!-- PROYECTO INFO -->
@@ -62,8 +62,8 @@ const mostrarProyecto = (id, nombre, imagen, descripcion, tecnologias, info, lin
 };
 
 listaProyectos().then(data => {
-    data.forEach(({id, nombre, imagen, descripcion, tecnologias, info, link }) => {
-        
+    data.forEach(({ id, nombre, imagen, descripcion, tecnologias, info, link }) => {
+
         const contenedorProyectos = document.querySelector('.proyectos__contenedor');
         const proyecto = mostrarProyecto(id, nombre, imagen, descripcion, tecnologias, info, link);
 
@@ -72,31 +72,80 @@ listaProyectos().then(data => {
     })
 })
 
-        // // Obtener los parámetros de la URL
-        //         const urlParams = new URLSearchParams(window.location.search);
-        //         const id = urlParams.get('id');
-        //         console.log(id);
-        //         const nombre = urlParams.get('nombre');
-        //         const imagen = urlParams.get('imagen');
-        //         const descripcion = urlParams.get('descripcion');
+ // Función para crear un objeto Typed cuando el elemento esté en el viewport
+function createTypedWhenVisible(selector, options) {
+    const element = document.querySelector(selector);
 
-        //         // Mostrar las propiedades del proyecto en el div
-        //         const proyectoDetalleDiv = document.querySelector('.proyecto__detalle');
-        //         proyectoDetalleDiv.innerHTML = `
-        //         <div class="proyecto__banner" style="background-Image: url(${imagen})"></div>
-        //         <div class="proyecto__info">
-        //             <h4 class="proyecto__nombre">${nombre}</h4>
-        //             <p class="proyecto__detalles">${descripcion}</p>
-        //             <div class="proyecto__tecnologias">
-                        
-        //             </div><!-- PROYECTO TECNOLOGIAS -->
-        //             <div class="proyecto__links">
-        //                 <div class="link__git">
-        //                     <a id="${id}" class="github" href="javascript:void(0);"><i class="bi bi-info-circle-fill"></i></a>
-        //                 </div>
-        //              <div class="link__link">
-        //                     <a class="link" href=""><i class="bi bi-link"></i></a>
-        //                 </div>
-        //             </div><!-- PROYECTO LINKS -->
-        //         </div><!-- PROYECTO INFO -->
-        //         `;
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                // Crear el objeto Typed cuando el elemento sea visible
+                new Typed(selector, options);
+                observer.unobserve(element); // Dejar de observar una vez que se crea el objeto Typed
+            }
+        });
+    });
+
+    observer.observe(element);
+}
+
+// Llamadas para crear los objetos Typed cuando los elementos sean visibles
+createTypedWhenVisible('.typed', {
+    strings: ['PORTAFOLIO', 'PROYECTOS', 'SKILLS', 'FORMACIÓN'],
+    typeSpeed: 100,
+    startDelay: 40,
+    backSpeed: 60,
+    smartBackspace: true,
+    shuffle: false,
+    backDelay: 190,
+    loop: true,
+    loopCount: true,
+    showCursor: true,
+    cursorChar: '|',
+    contentType: 'html',
+});
+
+createTypedWhenVisible('.typed2', {
+    strings: ['Personalidad geek, disfruto de aprender sobre tecnología y computadoras. Llevo más de un año en Desarrollo Web, tomando cursos y construyendo aplicaciones para llevar a la realidad lo aprendido. Busco aprender nuevas tecnologías y reforzar las que conozco. Interesado en ocupar un lugar en el campo laboral de la programación.'],
+    typeSpeed: 1,
+    startDelay: 0,
+    backSpeed: 0,
+    smartBackspace: true,
+    shuffle: false,
+    backDelay: 1500,
+    loop: false,
+    loopCount: false,
+    showCursor: false,
+    cursorChar: '|',
+    contentType: 'html',
+});
+
+createTypedWhenVisible('.typed3', {
+    strings: ['jaycode404@gmail.com'],
+    typeSpeed: 50,
+    startDelay: 3,
+    backSpeed: 0,
+    smartBackspace: true,
+    shuffle: false,
+    backDelay: 1500,
+    loop: false,
+    loopCount: false,
+    showCursor: false,
+    cursorChar: '|',
+    contentType: 'html',
+});
+
+createTypedWhenVisible('.typed4', {
+    strings: ['Jaycode'],
+    typeSpeed: 100,
+    startDelay: 300,
+    backSpeed: 0,
+    smartBackspace: true,
+    shuffle: false,
+    backDelay: 1500,
+    loop: false,
+    loopCount: false,
+    showCursor: false,
+    cursorChar: '|',
+    contentType: 'html',
+});
