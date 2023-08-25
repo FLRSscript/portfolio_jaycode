@@ -36,8 +36,10 @@
 }
 
 .proyecto__descripcion {
-    font-size: 1.3rem;
+    font-size: 1.1rem;
     line-height: 1.8rem;
+    overflow: hidden;
+    max-height: 10rem;
 }
 .proyectos__contenedor {
     display: flex;
@@ -49,6 +51,7 @@
     display: flex;
     flex-wrap: wrap;
     gap: 1rem;
+    min-height: 5rem;
     // margin-left: 1rem;
 }
 
@@ -89,7 +92,7 @@
     
 }
 
-.boot {
+.btrap {
     background-color: rgb(93, 177, 230);
     
 }
@@ -112,7 +115,7 @@
 .proyecto__links {
     display: flex;
     padding: 1rem;
-    margin-top: .2rem;
+    margin-top: auto;
     gap: 2rem;
     justify-content: center;
     align-items: center;
