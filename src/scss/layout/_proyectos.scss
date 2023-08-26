@@ -27,10 +27,7 @@
     font-weight: 700;
     font-size: 2rem;
 }
-.proyecto__nombre {
-    font-weight: 700;
-    font-size: 10rem;
-}
+
 
 .proyecto__imagen {
     background: url(/build/img/bmo.webp) center center / cover no-repeat;
@@ -38,11 +35,7 @@
     max-height: 15rem;
     border-radius: 1rem;
 }
-.proyecto__banner {
-    height: 30rem;
-    max-height: 20rem;
-    border-radius: 1rem;
-}
+
 
 .proyecto__descripcion {
     font-size: 1.1rem;
@@ -163,10 +156,37 @@
     min-height: 100vh;
 }
 
+/* ------------------------------------------ */
+/* ----------PROYECTO DETALLES--------------- */
+/* ------------------------------------------ */
+
 .proyecto__detalle {
     background-color: $azulD2;
     padding: 2rem;
     margin: 0 auto;
     width: 75%;   
     border-radius: 1.5rem;
+}
+.proyecto__banner {
+    height: 30rem;
+    max-height: 20rem;
+    border-radius: 1rem;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.proyecto__tecnologiasDetalle {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    min-height: 5rem;
+    // margin-left: 1rem;
+}
+.proyecto__nombre {
+    font-weight: 700;
+    font-size: 7rem;
+}
+.proyecto__detalles {
+    font-size: 1.5rem;
 }
