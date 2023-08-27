@@ -18,6 +18,11 @@ const redirigirProyecto = (id, nombre, imagen, descripcion, tecnologias, info, l
 
 // Función para mostrar el proyecto con enlace y capturar el ID
 const mostrarProyecto = (id, nombre, imagen, descripcion, tecnologias, info, link) => {
+
+    const enlace = document.createElement('a');
+    enlace.href = 'javascript:void(0);';
+    enlace.className = 'enlace';
+
     const proyectoCard = document.createElement('div');
     proyectoCard.className = 'proyecto__card';
 
@@ -32,33 +37,38 @@ const mostrarProyecto = (id, nombre, imagen, descripcion, tecnologias, info, lin
     });
 
     const contenido = `
-    <div class="proyecto__imagen" style="background-Image: url(${imagen})"></div>
-    <div class="proyecto__info">
-        <h4 class="proyecto__titulo">${nombre}</h4>
-        <p class="proyecto__descripcion">${descripcion}</p>
-        <div class="proyecto__tecnologias">
-            ${tecnologiasHTML}
-        </div><!-- PROYECTO TECNOLOGIAS -->
-        <div class="proyecto__links">
-            <div class="link__git">
-                <a id="${id}" class="github" href="javascript:void(0);"><i class="bi bi-info-circle-fill"></i></a>
-            </div>
-            <div class="link__link">
-                <a class="link" href="${link}" target="_blank"><i class="bi bi-link"></i></a>
-            </div>
-        </div><!-- PROYECTO LINKS -->
-    </div><!-- PROYECTO INFO -->
+        <div class="proyecto__imagen" style="background-Image: url(${imagen})"></div>
+        <div class="proyecto__info">
+            <h4 class="proyecto__titulo">${nombre}</h4>
+            <p class="proyecto__descripcion">${descripcion}</p>
+            <div class="proyecto__tecnologias">
+                ${tecnologiasHTML}
+            </div><!-- PROYECTO TECNOLOGIAS -->
+            <div class="proyecto__links">
+                <div class="link__git">
+                    <a id="" class="github" href="javascript:void(0);"><i class="bi bi-info-circle-fill"></i></a>
+                </div>
+                <div class="link__link">
+                    <a class="link" href="${link}" target="_blank"><i class="bi bi-link"></i></a>
+                </div>
+            </div><!-- PROYECTO LINKS -->
+        </div><!-- PROYECTO INFO -->
     `;
 
     proyectoCard.innerHTML = contenido;
-
+    enlace.append(proyectoCard);
+    
+    enlace.addEventListener('click', () => {
+        redirigirProyecto(id, nombre, imagen, descripcion, tecnologias, info, link);
+    });
     // Agregar evento de clic al enlace con ID
     const enlaceProyecto = proyectoCard.querySelector('.github');
     enlaceProyecto.addEventListener('click', () => {
         redirigirProyecto(id, nombre, imagen, descripcion, tecnologias, info, link);
     });
+  
 
-    return proyectoCard;
+    return enlace;
 };
 
 listaProyectos().then(data => {
@@ -81,13 +91,13 @@ listaProyectos().then(data => {
         const contenedorProyectos = document.querySelector('.proyectos__contenedortodos');
         const proyecto = mostrarProyecto(id, nombre, imagen, descripcion, tecnologias, info, link);
 
-        
+
         contenedorProyectos.appendChild(proyecto);
 
     })
 })
 
- // Función para crear un objeto Typed cuando el elemento esté en el viewport
+// Función para crear un objeto Typed cuando el elemento esté en el viewport
 function createTypedWhenVisible(selector, options) {
     const element = document.querySelector(selector);
 
