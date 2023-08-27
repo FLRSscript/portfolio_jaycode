@@ -4,6 +4,7 @@
 .proyectos {
     margin-bottom: 20rem;
 }
+
 .proyecto__card {
     height: auto;
     width: 25rem;
@@ -38,12 +39,17 @@
 
 
 .proyecto__descripcion {
-    font-size: 1.1rem;
-    line-height: 1.8rem;
+    font-size: 1.2rem;
+    line-height: 2rem;
     overflow: hidden;
     max-height: 10rem;
 }
 .proyectos__contenedor {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+.proyectos__contenedortodos {
     display: flex;
     flex-wrap: wrap;
     gap: 2rem;

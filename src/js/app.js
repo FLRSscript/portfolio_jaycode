@@ -44,7 +44,7 @@ const mostrarProyecto = (id, nombre, imagen, descripcion, tecnologias, info, lin
                 <a id="${id}" class="github" href="javascript:void(0);"><i class="bi bi-info-circle-fill"></i></a>
             </div>
             <div class="link__link">
-                <a class="link" href="${link}"><i class="bi bi-link"></i></a>
+                <a class="link" href="${link}" target="_blank"><i class="bi bi-link"></i></a>
             </div>
         </div><!-- PROYECTO LINKS -->
     </div><!-- PROYECTO INFO -->
@@ -62,11 +62,26 @@ const mostrarProyecto = (id, nombre, imagen, descripcion, tecnologias, info, lin
 };
 
 listaProyectos().then(data => {
+    const contenedorProyectos = document.querySelector('.proyectos__contenedor');
+    let contador = 0;
+
+    data.forEach(({ id, nombre, imagen, descripcion, tecnologias, info, link }) => {
+        if (contador < 3) {
+            const proyecto = mostrarProyecto(id, nombre, imagen, descripcion, tecnologias, info, link);
+            contenedorProyectos.appendChild(proyecto);
+            contador++;
+        }
+    });
+});
+
+
+listaProyectos().then(data => {
     data.forEach(({ id, nombre, imagen, descripcion, tecnologias, info, link }) => {
 
-        const contenedorProyectos = document.querySelector('.proyectos__contenedor');
+        const contenedorProyectos = document.querySelector('.proyectos__contenedortodos');
         const proyecto = mostrarProyecto(id, nombre, imagen, descripcion, tecnologias, info, link);
 
+        
         contenedorProyectos.appendChild(proyecto);
 
     })
