@@ -7,8 +7,8 @@
 
 .proyecto__card {
     @include telefono {
-        height: auto;
-        width: 13rem;
+        height: 36rem;
+        width: 17rem;
         padding: .5rem .5rem 0 .5rem;
         background-color: $azulD2;
     }
@@ -76,6 +76,7 @@
 .proyectos__contenedortodos {
     @include telefono {
         place-content: center;
+        
     }
     display: flex;
     flex-wrap: wrap;
@@ -84,7 +85,7 @@
 
 .proyecto__tecnologias {
     @include telefono {
-        display: none;
+        
     }
     display: flex;
     flex-wrap: wrap;
@@ -94,17 +95,17 @@
 }
 
 .tecnologia {
-    @include telefono {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: auto;
-        width: auto;
-        border-radius: .1rem;
-        gap: .5rem;
-        padding: .7rem;
-        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
-    }
+    // @include telefono {
+    //     display: flex;
+    //     justify-content: center;
+    //     align-items: center;
+    //     height: auto;
+    //     width: auto;
+    //     border-radius: .1rem;
+    //     gap: .5rem;
+    //     padding: .7rem;
+    //     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+    // }
     display: flex;
     justify-content: center;
     align-items: center;
@@ -152,15 +153,15 @@
 }
 
 .tecnologia__nombre {
-    @include telefono {
-        font-weight: 900;
-        font-family: $fuente_roboto;
-        font-size: 1rem;
-        letter-spacing: 1px;
-        margin: 0;
-        color: white;
-        text-transform: uppercase;
-    }
+    // @include telefono {
+    //     font-weight: 900;
+    //     font-family: $fuente_roboto;
+    //     font-size: 1rem;
+    //     letter-spacing: 1px;
+    //     margin: 0;
+    //     color: white;
+    //     text-transform: uppercase;
+    // }
     font-weight: 900;
     font-family: $fuente_roboto;
     font-size: 1rem;
@@ -174,7 +175,6 @@
     @include telefono{
         gap: 4rem;
     }
-  
     display: flex;
     padding: 1rem;
     margin-top: auto;

@@ -133,7 +133,10 @@ span {
 
 
 section {
-    min-height: 80vh;
+    @include telefono {
+        max-width: 100%;
+    }
+    min-height: 60vh;
     max-width: 85%;
 }
 
