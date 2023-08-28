@@ -134,8 +134,7 @@ span {
 
 section {
     @include telefono {
-        
-        height: auto;
+        height: 60rem;
         margin-bottom: 10rem;
     }
     height: 120vh;
