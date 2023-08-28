@@ -7,11 +7,12 @@
 
 .proyecto__card {
     @include telefono {
-        height: 36rem;
-        width: 17rem;
+        height: auto;
+        width:auto;
         padding: .5rem .5rem 0 .5rem;
         background-color: $azulD2;
     }
+
     height: auto;
     width: 25rem;
     padding: .5rem .5rem 0 .5rem;
@@ -46,6 +47,7 @@
         height: 10rem;
         max-height: 10rem;
     }
+
     background: url(/build/img/bmo.webp) center center / cover no-repeat;
     height: 15rem;
     max-height: 15rem;
@@ -60,6 +62,7 @@
         overflow: hidden;
         max-height: 5rem;
     }
+
     font-size: 1.2rem;
     line-height: 2rem;
     overflow: hidden;
@@ -76,8 +79,8 @@
 .proyectos__contenedortodos {
     @include telefono {
         place-content: center;
-        
     }
+
     display: flex;
     flex-wrap: wrap;
     gap: 2rem;
@@ -85,8 +88,9 @@
 
 .proyecto__tecnologias {
     @include telefono {
-        
+  
     }
+
     display: flex;
     flex-wrap: wrap;
     gap: 1rem;
@@ -172,9 +176,10 @@
 }
 
 .proyecto__links {
-    @include telefono{
+    @include telefono {
         gap: 4rem;
     }
+
     display: flex;
     padding: 1rem;
     margin-top: auto;
@@ -189,15 +194,17 @@
         width: 1rem;
         height: 1rem;
     }
+
     width: 1rem;
     height: 1rem;
 }
 
 .link {
-  
+
     @include telefono {
-        font-size: 30px;    
+        font-size: 30px;
     }
+
     font-size: 40px;
     color: greenyellow;
     transition: font-size 0.2s ease;
@@ -235,6 +242,7 @@
 
     }
 }
+
 .proyecto__detalle {
     @include telefono {
         background-color: $azulD2;
@@ -243,6 +251,7 @@
         width: 95%;
         border-radius: 1.5rem;
     }
+
     background-color: $azulD2;
     padding: 2rem;
     margin: 0 auto;
@@ -251,7 +260,7 @@
 }
 
 .proyecto__banner {
-    
+
     height: 30rem;
     max-height: 20rem;
     border-radius: 1rem;
@@ -270,8 +279,9 @@
 
 .proyecto__nombre {
     @include telefono {
-        font-size: 4rem;    
+        font-size: 4rem;
     }
+
     font-weight: 700;
     font-size: 7rem;
 }
