@@ -1,0 +1,14 @@
+.header__socialesfooter {
+    display: none;
+    @include telefono {
+        display: flex;
+        margin-top: 5rem;
+        gap: 5rem;
+
+        .bi {
+            font-size: 4rem;
+            color: $verde;
+
+        }
+    }
+}

@@ -11,7 +11,7 @@
 
 .dev__titulo {
     @include telefono {
-        margin: 3rem 0 2rem 0;
+        margin: 3rem 0 1rem 0;
         font-size: 4rem;
         color: $azulClaro;
     }
@@ -33,7 +33,8 @@
 
 .dev__descripcion {
     @include telefono {
-        font-size: 1.7rem;
+        font-size: 1.5rem;
+        width: 80%;
     }
     font-size: 2rem;
     width: 55rem;
@@ -45,9 +46,8 @@
 
 #kirby{
     @include telefono{
-        z-index: 10;
         position: absolute;
-        right: 2rem;
+        margin: 5rem 23rem 0rem 10rem ;
     }
     
 }

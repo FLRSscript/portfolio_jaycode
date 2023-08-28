@@ -92,6 +92,7 @@ span {
 
 .main {
     @include telefono {
+        width: 100%;
         text-align: left;
         padding: 2rem;
         background: linear-gradient(45deg, #051933, #164074);
@@ -125,6 +126,10 @@ span {
 
 
 section {
+    @include telefono {
+        min-height: 120vh;
+        max-width: 100%;
+    }
     min-height: 120vh;
     max-width: 85%;
 }
