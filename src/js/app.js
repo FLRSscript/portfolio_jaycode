@@ -1,5 +1,5 @@
 
-const listaProyectos = () => fetch('https://raw.githubusercontent.com/FLRSscript/proyectosAPI/main/db.json').then(respuesta => respuesta.json());
+const listaProyectos = () => fetch('https://raw.githubusercontent.com/jaycode404/proyectosAPI/main/db.json').then(respuesta => respuesta.json());
 
 // Función para redireccionar a una página con el ID como parámetro
 const redirigirProyecto = (id, nombre, imagen, descripcion, tecnologias, info, link) => {

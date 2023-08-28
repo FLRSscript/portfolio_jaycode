@@ -6,15 +6,22 @@
 }
 
 .proyecto__card {
+    @include telefono {
+        height: auto;
+        width: 17rem;
+        padding: .5rem .5rem 0 .5rem;
+        background-color: $azulD2;
+    }
+
     height: auto;
     width: 25rem;
-    padding: .5rem .5rem 0 .5rem ;
+    padding: .5rem .5rem 0 .5rem;
     background-color: $azulD2;
     // box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
-    
     border-radius: 1rem;
     transition: transform ease .2s;
-    &:hover{
+
+    &:hover {
         transform: scale(1.02);
         box-shadow: 0px 0px 20px rgba(0, 200, 111, 0.5);
     }
@@ -25,12 +32,21 @@
 }
 
 .proyecto__titulo {
+    @include telefono {
+        font-weight: 700;
+        font-size: 1.5rem;
+    }
+
     font-weight: 700;
     font-size: 2rem;
 }
 
 
 .proyecto__imagen {
+    @include telefono {
+        height: 10rem;
+        max-height: 10rem;
+    }
     background: url(/build/img/bmo.webp) center center / cover no-repeat;
     height: 15rem;
     max-height: 15rem;
@@ -39,16 +55,25 @@
 
 
 .proyecto__descripcion {
+    @include telefono {
+        font-size: 1rem;
+        line-height: 1.3rem;
+        overflow: hidden;
+        max-height: 5rem;
+    }
     font-size: 1.2rem;
     line-height: 2rem;
     overflow: hidden;
     max-height: 10rem;
+
 }
+
 .proyectos__contenedor {
     display: flex;
     flex-wrap: wrap;
     gap: 2rem;
 }
+
 .proyectos__contenedortodos {
     display: flex;
     flex-wrap: wrap;
@@ -64,6 +89,17 @@
 }
 
 .tecnologia {
+    @include telefono {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 1rem;
+        width: 4rem;
+        border-radius: .1rem;
+        gap: .5rem;
+        padding: .7rem;
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+    }
     display: flex;
     justify-content: center;
     align-items: center;
@@ -77,40 +113,49 @@
 
 .html {
     background-color: orange;
-    
+
 }
 
 .php {
     background-color: #8993be;
-    
+
 }
 
 .js {
     background-color: black;
-    
+
 }
 
 .css {
     background-color: rgb(44, 139, 235);
-    
+
 }
 
 .sass {
     background-color: rgb(216, 78, 207);
-    
+
 }
 
 .btrap {
     background-color: rgb(93, 177, 230);
-    
+
 }
 
 .sql {
     background-color: black;
-    
+
 }
 
 .tecnologia__nombre {
+    @include telefono {
+        font-weight: 900;
+        font-family: $fuente_roboto;
+        font-size: .7rem;
+        letter-spacing: 1px;
+        margin: 0;
+        color: white;
+        text-transform: uppercase;
+    }
     font-weight: 900;
     font-family: $fuente_roboto;
     font-size: 1rem;
@@ -131,6 +176,10 @@
 }
 
 .tecnologia__icon {
+    @include telefono {
+        width: .5rem;
+        height: .5rem;
+    }
     width: 1rem;
     height: 1rem;
 }
@@ -139,6 +188,7 @@
     font-size: 40px;
     color: greenyellow;
     transition: font-size 0.2s ease;
+
     &:hover {
         font-size: 55px;
     }
@@ -148,14 +198,14 @@
     font-size: 25px;
     color: greenyellow;
     transition: font-size 0.2s ease;
+
     &:hover {
         font-size: 40px;
     }
 }
 
 .ver-todos {
- margin: 4rem 0 0 0
- 
+    margin: 4rem 0 0 0
 }
 
 .proyectos-todos {
@@ -170,9 +220,10 @@
     background-color: $azulD2;
     padding: 2rem;
     margin: 0 auto;
-    width: 75%;   
+    width: 75%;
     border-radius: 1.5rem;
 }
+
 .proyecto__banner {
     height: 30rem;
     max-height: 20rem;
@@ -189,14 +240,18 @@
     min-height: 5rem;
     // margin-left: 1rem;
 }
+
 .proyecto__nombre {
     font-weight: 700;
     font-size: 7rem;
 }
+
 .proyecto__detalles {
     font-size: 1.5rem;
+    text-align: left;
 }
 
 .naranja {
     color: $naranja;
+    display: block;
 }

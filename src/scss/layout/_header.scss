@@ -1,13 +1,25 @@
-@use 'base/variables' as v;
-@use 'base/mixins' as m;
-
 .header {
+    @include telefono {
+        z-index: 9;
+        width: 100%;
+        height: 10rem;
+        position: fixed;
+        background-color: $azulMid;
+        box-shadow: 0px 0px 20px rgba(0, 200, 111, 0.5);
+    }
+
     position: fixed;
     background-color: $azulMid;
-    min-height: 100vh;
+    height: 100vh;
     box-shadow: 0px 0px 20px rgba(0, 200, 111, 0.5);
 
     .header__contenedor {
+        @include telefono {
+            display: flex;
+            padding: 1rem;
+            align-items: center;
+            gap: 3rem;
+        }
         display: block;
         padding: 4rem;
         justify-content: center;
@@ -15,12 +27,22 @@
         margin-top: 1rem;
 
         .header__titulo {
+            @include telefono {
+                color: #ffff;
+                border-bottom: 2px solid white;
+                font-size: 2rem;
+            }
+
             color: $azulD2;
             padding-bottom: 1rem;
             border-bottom: 2px solid white;
         }
 
         .header__imagen {
+            @include telefono {
+                display: none;
+            }
+
             background: url(/build/img/bmo.webp) center center / cover no-repeat;
             height: 15rem;
             width: 15rem;
@@ -30,24 +52,43 @@
         }
 
         .header__navegacion {
+            @include telefono {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                gap: 1.5rem;
+            }
+
             display: flex;
             flex-direction: column;
+
         }
 
         .header__navegacion a {
+            @include telefono {
+                color: white;
+                font-size: 1.5rem;
+            }
+
             color: white;
             font-size: 2rem;
         }
 
         .header__sociales {
+            @include telefono{
+                display: none;
+            }
             display: flex;
             gap: 2rem;
             margin-top: 2rem;
         }
-        .bi{
+
+        .bi {
             font-size: 2rem;
             color: white;
-            
+
         }
     }
+
 }

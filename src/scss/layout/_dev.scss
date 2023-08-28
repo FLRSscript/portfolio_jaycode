@@ -2,8 +2,21 @@
 @use 'base/mixins' as m;
 
 
+.dev__contenedor {
+    @include telefono {
+        margin-top: 15rem;
+    }
+
+}
+
 .dev__titulo {
-    margin: 0 0 3rem 0 ;
+    @include telefono {
+        margin: 3rem 0 2rem 0;
+        font-size: 4rem;
+        color: $azulClaro;
+    }
+
+    margin: 0 0 3rem 0;
     font-size: 7rem;
     color: $azulClaro;
 }
@@ -19,10 +32,22 @@
 }
 
 .dev__descripcion {
+    @include telefono {
+        font-size: 1.7rem;
+    }
     font-size: 2rem;
     width: 55rem;
 }
 
 .typed {
     color: $verde;
+}
+
+#kirby{
+    @include telefono{
+        z-index: 10;
+        position: absolute;
+        right: 2rem;
+    }
+    
 }
