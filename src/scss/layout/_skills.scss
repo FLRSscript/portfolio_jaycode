@@ -1,4 +1,14 @@
+
+// .skills {
+//     @include telefono {
+//         height: auto;
+//     }
+// }
 .skills__contenedor {
+    @include telefono {
+        gap: 3rem;
+    }
+
 display: grid;
 grid-template-columns: repeat(2, 1fr);
  
@@ -14,6 +24,12 @@ grid-template-columns: repeat(2, 1fr);
     margin-bottom: 2rem;
 }
 .stack {
+    @include telefono {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+        margin: 1rem 0 1rem 0;
+    }
     display: flex;
     flex-wrap: wrap;
     gap: 2.5rem;

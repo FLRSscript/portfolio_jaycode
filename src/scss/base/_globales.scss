@@ -11,12 +11,13 @@ html {
 
 body {
     @include telefono {
+        width: 100vw;
         font-family: $fuente_roboto;
         font-size: 1rem;
         line-height: 1.8;
         background-color: $azulD2;
     }
-
+    width: 100vw;
     font-family: $fuente_roboto;
     font-size: 1.6rem;
     line-height: 1.8;
@@ -24,6 +25,12 @@ body {
 }
 
 p {
+    @include telefono {
+        color: $verde;
+        font-size: 1.5rem;
+        font-family: $fuente_jet;
+       
+    }
     color: $verde;
     font-size: 2rem;
     font-family: $fuente_jet;
@@ -92,7 +99,7 @@ span {
 
 .main {
     @include telefono {
-        width: 100%;
+        width: 100vw;
         text-align: left;
         padding: 2rem;
         background: linear-gradient(45deg, #051933, #164074);
@@ -127,10 +134,11 @@ span {
 
 section {
     @include telefono {
-        min-height: 120vh;
-        max-width: 100%;
+        
+        height: auto;
+        margin-bottom: 10rem;
     }
-    min-height: 120vh;
+    height: 120vh;
     max-width: 85%;
 }
 
