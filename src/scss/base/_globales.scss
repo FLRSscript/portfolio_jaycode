@@ -17,7 +17,7 @@ body {
         line-height: 1.8;
         background-color: $azulD2;
     }
-    width: 100vw;
+    
     font-family: $fuente_roboto;
     font-size: 1.6rem;
     line-height: 1.8;
@@ -134,7 +134,7 @@ span {
 
 section {
     @include telefono {
-        height: 60rem;
+        height: auto;
         margin-bottom: 10rem;
     }
     height: 120vh;
