@@ -34,7 +34,7 @@
 .proyecto__titulo {
     @include telefono {
         font-weight: 700;
-        font-size: 1.5rem;
+        font-size: 2.5rem;
     }
 
     font-weight: 700;
@@ -58,9 +58,10 @@
 .proyecto__descripcion {
     @include telefono {
         font-size: 1.3rem;
-        line-height: 1.3rem;
+        line-height: 1.7rem;
         overflow: hidden;
-        max-height: 5rem;
+        max-height: 7rem;
+        margin-bottom: 2rem;
     }
 
     font-size: 1.2rem;
