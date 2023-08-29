@@ -17,6 +17,10 @@ grid-template-columns: repeat(2, 1fr);
     height: auto;
 }
 .skills__formacion {
+    @include telefono {
+        height: 50rem;  
+        
+    }
     height: 30rem;
 }
 
@@ -40,15 +44,23 @@ grid-template-columns: repeat(2, 1fr);
     font-size: 2rem;
 }
 .skill__descripcion {
+    @include telefono {
+        margin-bottom: 3rem;
+    }
     line-height: 2rem;
     font-size: 1.5rem;
     width: 15rem;
+    
 }
 .softskill {
     width: auto;
+    height: auto;
     background-color: $azulMid;
 }
 
 .softnombre {
+    @include telefono {
+        font-size: .8rem;
+    }
     font-size: .8rem;
 }
